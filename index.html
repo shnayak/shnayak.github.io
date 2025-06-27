@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiverse Technologies - Your Partner in Heavy Power Electronics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Hero image background with subtle overlay */
+        .hero-background {
+            /* Updated background image URL for a more relevant industrial look */
+            background-image: url('./images/banner.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Basic transition for buttons */
+        .btn-primary {
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0A2647; /* Darker blue on hover */
+        }
+        .btn-secondary {
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #f0f4f8; /* Lighter grey on hover */
+            border-color: #cbd5e1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#home" class="text-3xl font-bold text-blue-800 hover:text-blue-900 transition-colors duration-300 rounded-lg p-2">
+                Multiverse<span class="text-gray-600">Tech</span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2 transition-transform duration-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-blue-800 font-medium transition-colors duration-300 rounded-md px-3 py-2">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-800 font-medium transition-colors duration-300 rounded-md px-3 py-2">About Us</a>
+                <a href="#products" class="text-gray-600 hover:text-blue-800 font-medium transition-colors duration-300 rounded-md px-3 py-2">Products</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-800 font-medium transition-colors duration-300 rounded-md px-3 py-2">Contact</a>
+                <a href="#payments" class="text-gray-600 hover:text-blue-800 font-medium transition-colors duration-300 rounded-md px-3 py-2">Payments</a>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 shadow-lg rounded-b-lg">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#home" class="block text-gray-700 hover:text-blue-800 font-medium text-lg w-full text-center py-2 px-4 rounded-md transition-colors duration-300">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-800 font-medium text-lg w-full text-center py-2 px-4 rounded-md transition-colors duration-300">About Us</a>
+                <a href="#products" class="block text-gray-700 hover:text-blue-800 font-medium text-lg w-full text-center py-2 px-4 rounded-md transition-colors duration-300">Products</a>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-800 font-medium text-lg w-full text-center py-2 px-4 rounded-md transition-colors duration-300">Contact</a>
+                <a href="#payments" class="block text-gray-700 hover:text-blue-800 font-medium text-lg w-full text-center py-2 px-4 rounded-md transition-colors duration-300">Payments</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-background h-screen flex items-center justify-center text-white text-center px-4 py-16">
+            <div class="hero-content max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                    Your Gateway to Premium Power Electronics Solutions
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up">
+                    Connecting leading manufacturers with businesses requiring robust Power Supplies, Stabilizers, Batteries & more.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center animate-fade-in-up">
+                    <a href="#contact" class="btn-primary bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        Request a Quote
+                    </a>
+                    <a href="#products" class="btn-secondary bg-transparent border-2 border-white hover:bg-white hover:text-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        Explore Products
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">About Multiverse Technologies</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <!-- Placeholder image for Experienced Professional -->
+                        <img src="./images/shakti-nayak.jpg" alt="Experienced Professional" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2 text-lg leading-relaxed">
+                        <p class="mb-6">
+                            "Multiverse Technologies" is the culmination of over <strong class="text-blue-700">20 years of dedicated experience</strong> in the heavy power electronics industry. Founded by a seasoned professional who previously served as a Sales Manager at <strong class="text-blue-700">Aplab Ltd.</strong>, our firm stands as a reliable bridge between top-tier manufacturers and businesses seeking robust power solutions.
+                        </p>
+                        <p class="mb-6">
+                            With an unparalleled network of Original Equipment Manufacturers (OEMs) and a deep understanding of market needs, we specialize in sourcing and brokering high-quality products, including <strong class="text-blue-700">industrial power supplies (>5KVA)</strong>, <strong class="text-blue-700">online ups</strong>, and a comprehensive range of <strong class="text-blue-700">batteries</strong>, along with other related power electronics products.
+                        </p>
+                        <p>
+                            Our mission is to simplify your procurement process, offering tailored solutions, competitive pricing, and expert guidance to ensure you acquire the precise power electronics products for your specific applications. Leveraging long-standing relationships and industry insights, Multiverse Technologies is committed to delivering efficiency, value, and reliability to every client.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories Section -->
+        <section id="products" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">Our Product Portfolio</h2>
+                <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-16">
+                    We connect you with a diverse range of heavy power electronics from trusted OEMs, ensuring quality and performance for your critical applications.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Product Card 1: Power Supplies -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                        <img src="./images/Industrial-Power-Supplies.jpg" alt="Industrial Power Supplies" class="w-full h-48 object-cover">
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Industrial Power Supplies (>5KVA)</h3>
+                            <p class="text-gray-700 mb-4 flex-grow">
+                                High-capacity power solutions ranging from <strong class="text-blue-600">5KVA to 1000KVA+</strong>. We source AC-DC, DC-DC, and programmable power supplies ideal for industrial automation, telecom, data centers, and specialized manufacturing.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm mb-6">
+                                <li><strong>Types:</strong> SMPS, Linear, Programmable, DC-DC Converters</li>
+                                <li><strong>Applications:</strong> Manufacturing, Telecom, Medical, R&D Labs</li>
+                                <li><strong>Features:</strong> High efficiency, low ripple, protection circuits</li>
+                            </ul>
+                            <a href="#contact" class="mt-auto btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-base self-start">
+                                Request Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2: Stabilizers -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                        <img src="./images/voltage-stabilizer.jpg" alt="Voltage Stabilizers" class="w-full h-48 object-cover">
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Voltage Stabilizers (Servo & Relay)</h3>
+                            <p class="text-gray-700 mb-4 flex-grow">
+                                Protect your valuable equipment from voltage fluctuations. We provide high-efficiency solutions from <strong class="text-blue-600">3KVA to 2000KVA</strong>, available in single-phase and three-phase configurations.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm mb-6">
+                                <li><strong>Types:</strong> Servo Controlled, Relay Type, Static</li>
+                                <li><strong>Applications:</strong> CNC Machines, Medical Equipment, Commercial Buildings</li>
+                                <li><strong>Features:</strong> Fast response, wide input voltage range, overload protection</li>
+                            </ul>
+                            <a href="#contact" class="mt-auto btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-base self-start">
+                                Request Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3: Batteries -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                        <img src="./images/industrial-battery-charger.jpg" alt="Industrial Batteries" class="w-full h-48 object-cover">
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Industrial & Automotive Batteries</h3>
+                            <p class="text-gray-700 mb-4 flex-grow">
+                                Reliable power backup and starting solutions. Our range includes SMF, Tubular, Lead-Acid, and advanced Lithium-ion batteries.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm mb-6">
+                                <li><strong>Types:</strong> SMF, Tubular, Lithium-ion, Lead-Acid</li>
+                                <li><strong>Applications:</strong> UPS, Inverters, Solar, Electric Vehicles, Forklifts</li>
+                                <li><strong>Capacity:</strong> From 7Ah to 2000Ah and beyond</li>
+                            </ul>
+                            <a href="#contact" class="mt-auto btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-base self-start">
+                                Request Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4: UPS Systems -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                        <img src="./images/dual-output-dc-power-supply.jpg" alt="UPS Systems" class="w-full h-48 object-cover">
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-4">UPS Systems & Inverters</h3>
+                            <p class="text-gray-700 mb-4 flex-grow">
+                                Seamless power backup solutions for critical operations. We broker Online, Offline, and Line-Interactive UPS systems, along with high-efficiency inverters.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm mb-6">
+                                <li><strong>Types:</strong> Online, Offline, Line-Interactive UPS</li>
+                                <li><strong>Capacity:</strong> 1KVA to 100KVA+</li>
+                                <li><strong>Applications:</strong> Data Centers, Hospitals, Commercial Spaces</li>
+                            </ul>
+                            <a href="#contact" class="mt-auto btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-base self-start">
+                                Request Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5: Custom Power Solutions -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                        <img src="./images/custom-power-electronics.png" alt="Custom Solutions" class="w-full h-48 object-cover">
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Custom Power Solutions</h3>
+                            <p class="text-gray-700 mb-4 flex-grow">
+                                Specialized power electronics tailored to unique project requirements and complex industrial applications. From specific voltage requirements to custom enclosures.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm mb-6">
+                                <li><strong>Services:</strong> Design consultation, component sourcing, integration support</li>
+                                <li><strong>Expertise:</strong> High voltage, high current, specific environmental needs</li>
+                            </ul>
+                            <a href="#contact" class="mt-auto btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-base self-start">
+                                Discuss Your Project
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6: Our OEM Partners -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x350/CED8E3/0A2647?text=OEM+Partners" alt="OEM Partners" class="w-full h-48 object-cover">
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Our OEM Partners</h3>
+                            <p class="text-gray-700 mb-4 flex-grow">
+                                We collaborate with a network of trusted OEMs (Original Equipment Manufacturers) renowned for their quality and innovation in the power electronics sector.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm mb-6">
+                                <li>Access to a wide range of certified products</li>
+                                <li>Ensured quality and reliability from industry leaders</li>
+                                <li>Competitive pricing due to strong partnerships</li>
+                            </ul>
+                            <a href="#contact" class="mt-auto btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-base self-start">
+                                Partner Inquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">Get in Touch</h2>
+                <p class="text-center text-lg text-gray-700 mb-10">
+                    Have a specific requirement? Need a quote or expert advice? Fill out the form below and we'll get back to you promptly.
+                </p>
+
+                <form id="contact-form" class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">Your Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-800 transition-all duration-200">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Your Email <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-800 transition-all duration-200">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="phone" class="block text-gray-700 text-sm font-semibold mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-800 transition-all duration-200">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-gray-700 text-sm font-semibold mb-2">Company Name</label>
+                            <input type="text" id="company" name="company"
+                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-800 transition-all duration-200">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">Your Requirements / Message <span class="text-red-500">*</span></label>
+                        <textarea id="message" name="message" rows="6" required
+                            class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-800 transition-all duration-200"></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-10 rounded-full text-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                            Submit Inquiry
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Confirmation Message Box -->
+                <div id="confirmation-box" class="hidden mt-8 p-6 bg-green-100 border border-green-400 text-green-700 rounded-lg shadow-md text-center">
+                    <p class="font-semibold text-lg mb-2">Thank You!</p>
+                    <p>Your inquiry has been submitted successfully. We will get back to you shortly.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Payments Section -->
+        <section id="payments" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h2 class="text-4xl font-bold text-blue-800 mb-12">Payment Options</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    For your convenience, Multiverse Technologies accepts payments via PhonePe Business. This ensures a secure and seamless transaction process.
+                </p>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 inline-block max-w-full">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">How to Pay via PhonePe Business</h3>
+                    <p class="text-gray-700 mb-4">
+                        We will share a secure PhonePe Business payment link or QR code directly with you via email or WhatsApp once your order/service is confirmed.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        You can then simply click the link or scan the QR code using your PhonePe app (or any UPI app) to complete the payment.
+                    </p>
+                    <!-- Placeholder for PhonePe QR Code -->
+                    <img src="https://placehold.co/300x300/F0F4F8/3B82F6?text=PhonePe+QR+Code+Placeholder" alt="PhonePe QR Code Placeholder" class="mx-auto my-6 rounded-lg shadow-md">
+                    <p class="text-sm text-gray-500 mt-4">
+                        (The actual PhonePe QR code/link will be provided upon order confirmation)
+                    </p>
+                    <div class="mt-8">
+                        <p class="text-lg font-semibold text-blue-800 mb-2">For any payment-related queries, please contact us:</p>
+                        <!-- Updated contact email and phone for payments -->
+                        <p class="text-gray-700">Email: <a href="mailto:info@Multiversetech.com" class="text-blue-600 hover:underline">info@Multiversetech.com</a></p>
+                        <p class="text-gray-700">Phone: <a href="tel:+919822XXXXXX" class="text-blue-600 hover:underline">+91 9822XXXXXX</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                <a href="#home" class="text-3xl font-bold text-white hover:text-blue-100 transition-colors duration-300 rounded-lg p-2">
+                    Multiverse<span class="text-gray-300">Tech</span>
+                </a>
+            </div>
+            <div class="flex flex-wrap justify-center space-x-6 mb-6 text-lg">
+                <a href="#home" class="hover:text-blue-300 transition-colors duration-300">Home</a>
+                <a href="#about" class="hover:text-blue-300 transition-colors duration-300">About Us</a>
+                <a href="#products" class="hover:text-blue-300 transition-colors duration-300">Products</a>
+                <a href="#contact" class="hover:text-blue-300 transition-colors duration-300">Contact</a>
+                <a href="#payments" class="hover:text-blue-300 transition-colors duration-300">Payments</a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2025 Multiverse Technologies. All rights reserved.</p>
+            <p class="text-gray-400 text-sm mt-1">Designed with precision for your power needs.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // JavaScript for Contact Form Submission (Client-Side Only)
+        // In a real-world scenario, this would send data to a backend server.
+        const contactForm = document.getElementById('contact-form');
+        const confirmationBox = document.getElementById('confirmation-box');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Gather form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                message: document.getElementById('message').value
+            };
+
+            // For demonstration, log data to console
+            console.log('Contact Form Data Submitted:', formData);
+
+            // Simulate successful submission by showing confirmation message
+            confirmationBox.classList.remove('hidden');
+            contactForm.reset(); // Clear the form
+
+            // Optionally, hide the confirmation message after a few seconds
+            setTimeout(() => {
+                confirmationBox.classList.add('hidden');
+            }, 5000); // Hide after 5 seconds
+
+            // In a real application, you would send this data to your server
+            // using fetch() or XMLHttpRequest:
+            /*
+            fetch('/api/contact', { // Replace with your actual API endpoint
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                confirmationBox.classList.remove('hidden');
+                contactForm.reset();
+                setTimeout(() => {
+                    confirmationBox.classList.add('hidden');
+                }, 5000);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                // Display an error message to the user
+                alert('There was an error submitting your form. Please try again.');
+            });
+            */
+        });
+    </script>
+</body>
+</html>
